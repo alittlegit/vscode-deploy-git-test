@@ -1,0 +1,26 @@
+{
+    "deploy": {
+        "packages": [{
+            "files": [
+                "**/*",
+            ],
+
+            "exclude": [
+                "node_modules/**",
+                ".git/**",
+                ".vscode/**",
+                "**/node_modules/**",
+            ],
+            "deployOnSave": false
+        }],
+        "targets": [{
+            "type": "sftp",
+            "name": "AliyunServer",
+            "dir": "/source/deploy/test",
+            "host": "101.132.98.248",
+            "port": 22,
+            "user": "root",
+            "privateKey": "C:/Users/ccb/.ssh/id_rsa"
+        }],
+    },
+}
